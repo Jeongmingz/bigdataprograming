@@ -14,3 +14,8 @@ ranger = my_range()
 
 for i in ranger:
     print(i, end=' ')
+
+# 이미 ranger가 generator의 역할을 하고 한번 실행 이후 사라졌기 때문에
+# 이번 for문은 실행하지 않는다.
+for i in ranger:
+    print(i, end=' ')
