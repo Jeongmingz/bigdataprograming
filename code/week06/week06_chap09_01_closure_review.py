@@ -5,17 +5,32 @@ import time
 
 
 def time_check(func):  # closure
+<<<<<<< HEAD
 	def inner(*args):
 		print(f"function name : {func.__name__}")
 		s = time.time()
 		r = func(*args)
 		e = time.time()
 		print(f"함수를 처리하는데 걸린 시간 : {e - s}")
+=======
+	def inner(*args, **kwargs):
+		print(f"function name : {func.__name__}")
+		print(f"function doc : {func.__doc__}")
+		s = time.time()
+		r = func(*args, **kwargs)
+		e = time.time()
+		print(f"함수를 처리하는데 걸린 시간 : {e - s}")
+		print(f"결과 : {r}")
+>>>>>>> ac6b22538afc74f46071726efc63ddeeb353e7ab
 		return r
 
 	return inner
 
+<<<<<<< HEAD
 
+=======
+# Decorators 어노테이션
+>>>>>>> ac6b22538afc74f46071726efc63ddeeb353e7ab
 @time_check
 def do_something():
 	total = 0
@@ -26,13 +41,55 @@ def do_something():
 
 @time_check
 def factorial(n):
+<<<<<<< HEAD
+=======
+	'''
+	팩토리얼 함수 (for 문 사용)
+	:param n:
+	:return: Type: int , 팩토리얼 계산 결과 값.
+	'''
+>>>>>>> ac6b22538afc74f46071726efc63ddeeb353e7ab
 	result = 1
 	for i in range(2, n + 1):
 		result = result * i
 	return result  # 레이블에 결과 출력
 
 
+<<<<<<< HEAD
 print(factorial(10))
+=======
+# @time_check
+def factorial_recursion(n):
+	"""
+	팩토리얼 함수 (recursion 재귀함수 사용)
+	:param n: Type : int, 입력값
+	:return: Type: int , 팩토리얼 계산 결과 값.
+	"""
+
+	if n == 1:
+		return 1
+	else:
+		return n * factorial_recursion(n-1)
+
+@time_check
+def power(base, exponent):
+	"""
+	거듭제곱 함수, 내장 함수인 pow | ** 와 같은 결과
+	:param base: 밑 Type:int
+	:param exponent: 지수 Type:int
+	:return: 거듭제곱 결과 값 Type:int
+	"""
+	result = 1
+	for _ in range(exponent):
+		result *= base
+
+	return result
+
+
+factorial(10)
+print(factorial_recursion(10))
+power(exponent=4, base=2)
+>>>>>>> ac6b22538afc74f46071726efc63ddeeb353e7ab
 
 
 # daelim_func = time_check(factorial)
