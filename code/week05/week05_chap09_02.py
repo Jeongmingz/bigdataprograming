@@ -11,23 +11,23 @@ number = int(input())
 is_prime = True
 
 if number <= 1:
-  is_prime = False
+    is_prime = False
 else:
-  for i in range(2, number):
-    if number % i == 0:
-      is_prime = False
-      break
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+            break
 
 if is_prime:
-  print(f'{number} is prime number~')
+    print(f'{number} is prime number~')
 else:
-  print(f'{number} is NOT prime number!')
+    print(f'{number} is NOT prime number!')
 
 # 2
 # 11
 # 2 3 5 7 11
 a, b = map(int, input().split())
-for i in range(a, b+1):
+for i in range(a, b + 1):
     is_prime = True
 
     if i <= 1:
