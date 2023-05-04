@@ -1,3 +1,4 @@
+
 letters = 'abcdefghijklmnopqrstuvwxyz'
 # split => str -> list | default = space
 daelim = 'Daelim University'.split('i')
