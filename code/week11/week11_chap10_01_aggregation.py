@@ -1,3 +1,4 @@
+# week11_chap10_01_aggregation.py
 class Pokemon:
     pokemon_count = 0  # class variable
 
@@ -47,16 +48,32 @@ class Pokemon:
         print('포켓몬에 관련한 클래스입니다. ')
 
 
-Pokemon.info()
+# aggregation
+class Trainer:
+    def __init__(self, pokemon, name):
+        self.pokemon = pokemon
+        self.name = name
 
+    def pokemon_info(self):
+        print(f'{self.name}의 소유 포켓몬은 {self.pokemon}입니다.\n'
+              f'{self.pokemon.name}의 레벨은 {self.pokemon.level}')
+
+
+Pokemon.info()
 
 print(Pokemon.pokemon_count)
 
 p1 = Pokemon('피카츄', 1)
 p2 = Pokemon('리자몽', 36)
 
-print(p1)
-print(p1 + p2)  # == print(p1.__add__(p2))
+t1 = Trainer(p1, '한지우')
+
+t1.pokemon_info()
+
+
+
+# print(p1)
+# print(p1 + p2)  # == print(p1.__add__(p2))
 
 # Pokemon.pokemon_count = 9
 # print(Pokemon.get_pokemon_count())
