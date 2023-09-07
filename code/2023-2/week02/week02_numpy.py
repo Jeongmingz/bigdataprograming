@@ -1,9 +1,8 @@
 import numpy as np
-import pandas as pd
+import random
 
-# v = np.array([1, 3, -9, 2], dtype='int32')
-v = np.array([[1, 3, -9, 2], [1, 3, -9, 2]], dtype='int32')
+num = int(input('숫자 입력 : '))
+list_ = [random.randint(1,100) for _ in range(num)]
 
-
-print(v.ndim, v.shape, v.data, v.dtype, v.strides)
-
+ndarray_ = np.array(list_, dtype='int16')
+print(ndarray_)
