@@ -8,6 +8,14 @@ n3 = np.array([[[1], [2], [3.]], [[4], [5], [6]], [[7], [8], [9]]])
 test = [1, '9', 1111.]
 n4 = np.array(test)
 
+# shape : 구성을 알려준다. (,) <-   이 튜플안에 숫자가 몇개 들었는지 에 따라 차원을 알 수 있다.
+#                               그 숫자가 의미하는 건 그 차원에 몇개의 item이 있는지다.
+#                               return type : tuple
+# ndim : 몇 차원인지 리턴.  return type: int
+# size : 총 요소의 갯수를 리턴한다. return type: int
+# dtype : 해당 array의 요소의 타입을 리턴한다. return type: str
+# itemsize : 요소의 메모리 값을 리턴한다.
+# data : 시작 주소값 리턴
 
 print(type(n1), n1)
 print(n1[1])               # 0d array, scalar

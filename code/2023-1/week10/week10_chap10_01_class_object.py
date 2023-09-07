@@ -21,4 +21,3 @@ p1 = Pokemon('피카츄')
 print(p1.name)
 p1.name = '라이츄'
 print(p1.name)
-

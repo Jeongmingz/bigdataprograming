@@ -29,8 +29,7 @@ print(bonus_salary)
 
 # mixed
 # ndarray는 파이썬의 리스트 처럼 서로 다른 타입의 원소를 가질 수 없다.
-# 다른 타입의 원소들이 섞여 있다면, 가장 우선 순위(byte)가 높은 타입으로 변환된다.ㄴ
-
+# 다른 타입의 원소들이 섞여 있다면, 가장 우선 순위(byte)가 높은 타입으로 변환된다.
 mixed = np.array([-9, 'daelim', False, 2.71])
 print(mixed)
 

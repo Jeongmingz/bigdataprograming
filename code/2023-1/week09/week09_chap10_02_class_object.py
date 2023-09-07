@@ -27,4 +27,4 @@ class Hinny(Horse, Donkey):
 m1 = Mule()
 print(m1.says())
 print(m1.eating())
-print(Mule.mro())
+print(Mule.mro())  # mro => 0 index: 해당 클래스 명 | 1 ~ n index: 부모 클래스 (순서대로)
