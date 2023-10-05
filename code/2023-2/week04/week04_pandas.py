@@ -8,10 +8,8 @@ def predict_life_satisfaction():
 
 	# Download and prepare the data
 	life_satisfaction = pd.read_csv("https://github.com/ageron/data/raw/main/lifesat/lifesat.csv")
-
 	X = life_satisfaction[["GDP per capita (USD)"]].values  # return 2d Array
 	y = life_satisfaction[["Life satisfaction"]].values
-
 
 	# Visualize the data
 	# import matplotlib.pyplot as plt
@@ -33,6 +31,7 @@ def predict_life_satisfaction():
 
 	lbl_life_satisfaction.config(text=f'해당 국가의 삶의 만족도는 {model.predict(X_new)}')
 
+
 if __name__ == "__main__":
 	window = tk.Tk()
 	window.title("삶의 만족도 예측 프로그램")
@@ -45,7 +44,6 @@ if __name__ == "__main__":
 	lbl_life_satisfaction.pack()
 	en_GDP_per_capita.pack(fill='x')
 	btn_predict.pack(fill='x')
-
 
 	window.mainloop()
 
