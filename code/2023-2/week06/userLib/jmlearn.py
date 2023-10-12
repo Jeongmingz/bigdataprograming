@@ -29,3 +29,23 @@ class LinearRegression:
 		:return: Predict Value for input (2d format)
 		"""
 		return self.slope * np.array(X) + self.intercept
+
+
+class KNeighborsRegressor:
+	def __init__(self, n_neighbors=5):
+		self.y = None
+		self.X = None
+		self.n_neighbors = n_neighbors
+
+	def fit(self, X, y) -> None:
+		self.X = X
+		self.y = y
+
+	def predict(self, X) -> list:
+		for x in X:
+			distances = np.sqrt(np.sum((x - self.X)**2, axis=1))
+
+		indices = np.argsort(distances)[:self.n_neighbors]
+		predictions = [np.mean(self.y[indices])]
+
+		return np.array(predictions).reshape(-1, 1)
